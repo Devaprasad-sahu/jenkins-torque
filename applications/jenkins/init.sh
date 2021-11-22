@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DOCKERFILE_REPO="https://github.com/QualiSystemsLab/colony-jenkins-dockerized.git"
+DOCKERFILE_REPO="https://github.com/QualiTorque/torque-jenkins-dockerized.git"
 DOCKER_COMPOSE_VER="1.26.2"
 WORKDIR="/tmp/jenkins"
 COLONY_PLUGIN_URL="https://github.com/cloudshell-colony/jenkins-plugin/releases/latest/download/colony.hpi"
@@ -42,7 +42,7 @@ sed -i "s/%SPACE%/${SPACE_NAME}/g" ${WORKDIR}/master/config.xml
 sed -i "s/%BUCKET_NAME%/${BUCKET_NAME}/g" ${WORKDIR}/master/config.xml
 
 echo "==> Preparing a CasC config"
-sed -i "s|%TOKEN%|${CS_COLONY_TOKEN}|g" ${WORKDIR}/master/jenkins.yaml
+sed -i "s|%TOKEN%|${CS_TORQUE_TOKEN}|g" ${WORKDIR}/master/jenkins.yaml
 
 echo "==> Downloading a plugin file"
 wget --no-check-certificate ${COLONY_PLUGIN_URL} -O ${WORKDIR}/master/colony.hpi
