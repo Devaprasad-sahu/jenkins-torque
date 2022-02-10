@@ -17,6 +17,7 @@ inputs:
         Open the Settings page and click the Integrations tab. Under the Jenkins
         Pipeline icon, click Connect. In the Connect Torque to your Jenkins Pipeline.
         Copy the automatically generated token.
+
   - SPACE_NAME:
 
   - JENKINS_ADMIN_PASS:
@@ -30,6 +31,9 @@ inputs:
         AWS IAM instance profile role name allowing Jenkins to access S3 bucket
 
   - BUCKET_NAME:
+      possible_values:
+        - abc
+        - def
       description: >
         This bucket will be used to store build artifacts
 
