@@ -31,9 +31,6 @@ inputs:
         AWS IAM instance profile role name allowing Jenkins to access S3 bucket
 
   - BUCKET_NAME:
-      possible_values:
-        - abc
-        - def
       description: >
         This bucket will be used to store build artifacts
 
